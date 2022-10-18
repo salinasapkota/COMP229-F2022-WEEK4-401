@@ -4,6 +4,7 @@
             <h1><%= title %></h1>
 
             <form class = "form" method = "POST">
+                <input type = "hidden" name="id" value="<%=movie._id %>">
                 <div class = "form-group">
                     <label for="nameTextField">Movie Title</label>
                     <input type="text" class="form-control"
@@ -40,8 +41,9 @@
                     id="descriptionTextArea"
                     placeholder="Enter the Movie Genre"
                     name="genre" 
-                    required>
-                    <%= movie.genre %>
+                    value="<%= movie.genre %>"
+                    required
+                    >
                 </input>
                 </div>
 
